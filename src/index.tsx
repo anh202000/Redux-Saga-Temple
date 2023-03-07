@@ -5,14 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import { storeRouter } from './router/storeRouter';
+import { RouterProvider } from 'react-router-dom';
+import LoadingComponent from './src/component/loading';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-    <App />
+      <LoadingComponent />
+      <RouterProvider router={storeRouter} />
     </Provider>
   </React.StrictMode>
 );

@@ -1,11 +1,10 @@
-import { all, call, fork, put, takeEvery, takeLatest } from 'redux-saga/effects'
+import { all, call, fork, put, takeLatest } from 'redux-saga/effects'
 import * as types from '../redux/actionTypes'
 import { getRecipe } from '../service'
 
 // worker Saga: will be fired on USER_FETCH_REQUESTED actions
 function* fetchUser({param}) {
   try {
-    console.log(param, '123')
     const response = yield call(getRecipe, param )
     yield put({ type: types.FETCH_RECIPE_SUCCESS, payload: response?.data?.array })
   } catch (e) {
