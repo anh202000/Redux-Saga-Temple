@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -27,7 +27,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );
 }
