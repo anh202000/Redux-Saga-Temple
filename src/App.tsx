@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import * as types from './store/redux/actionTypes';
 
 function App() {
+  const dispatch = useDispatch();
+  const state = useSelector((state: any) => state?.data);
+  console.log(state, 'state');
+  useEffect(() => {
+    dispatch({ type: types.FETCH_RECIPE_START, param: '123123' });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
