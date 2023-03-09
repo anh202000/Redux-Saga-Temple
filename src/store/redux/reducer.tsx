@@ -8,6 +8,7 @@ const initialState = {
 
 const Reducer = (state = initialState, action: any) => {
     switch(action.type) {
+        // RECIPE REDUCER
         case types.FETCH_RECIPE_START: {
             return {
                 ...state,
